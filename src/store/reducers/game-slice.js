@@ -70,7 +70,7 @@ const gameSlice = createSlice({
       };
 
       if (wordToCheck.length !== 5) {
-        console.log("Nedovoljno slova");
+        // console.log("Nedovoljno slova");
         return;
       }
 

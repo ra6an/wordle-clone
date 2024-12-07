@@ -12,7 +12,7 @@ import Button from "../UI/Button";
 
 const Modal = (props) => {
   const dispatch = useDispatch();
-  const { word, guessesLeft, gameEnded, guesses, currentGuess } = useSelector(
+  const { word, gameEnded, guesses, currentGuess } = useSelector(
     (state) => state.game
   );
 
