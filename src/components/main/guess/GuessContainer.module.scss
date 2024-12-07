@@ -1,0 +1,101 @@
+@use "../../../styles/abstract/mixins" as *;
+
+.container {
+  @include flexColumn;
+  gap: 0.6rem;
+
+  .word-container {
+    @include flexRow;
+    gap: 0.6rem;
+    position: relative;
+
+    .error-msg {
+      position: absolute;
+      bottom: 0;
+      height: 4rem;
+      font-weight: 500;
+      width: 96%;
+      @include flexRow;
+      border-radius: 0.6rem;
+      scale: 0;
+      transform: translateY(115%);
+      z-index: 10;
+      animation: scale-up 1.2s ease-in;
+    }
+
+    .error-msg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      transform: translateY(-90%);
+      background-color: inherit;
+      width: 2rem;
+      height: 0.8rem;
+      clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 50% 100%);
+    }
+
+    .letter {
+      height: 6.2rem;
+      width: 6.2rem;
+      border: 0.2rem solid;
+      @include flexRow;
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-bottom: 0rem;
+    }
+
+    .anim-popup {
+      animation: pop-up 0.1s ease-in;
+    }
+
+    .flip-coin {
+      animation: flip-coin 0.2s ease-in;
+    }
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    // transform: scale(0%);
+    scale: 0%;
+  }
+  6% {
+    scale: 100%;
+    // transform: scale(100%);
+  }
+  94% {
+    scale: 100%;
+    // transform: scale(100%);
+  }
+  100% {
+    scale: 0%;
+    // transform: scale(0%);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flip-coin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg); /* Polovica rotacije - nestajanje */
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotateY(180deg); /* Pun okret */
+    opacity: 1;
+  }
+}

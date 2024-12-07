@@ -1,0 +1,27 @@
+//
+@use "../../styles/abstract/mixins" as *;
+
+.container {
+  max-width: 100%;
+  @include flexColumn;
+  gap: 2.4rem;
+  align-items: flex-start;
+
+  .single-info {
+    @include flexRow;
+    gap: 2rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.01rem;
+    font-weight: 300;
+
+    .color {
+      height: 4.2rem;
+      width: 4.2rem;
+      border-radius: 0.2rem;
+    }
+
+    p {
+      flex: 1;
+    }
+  }
+}

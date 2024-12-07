@@ -1,0 +1,113 @@
+@use "../abstract/colors" as *;
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.light {
+  .text {
+    color: $primary-text-color-light;
+    font-size: 1.6rem;
+  }
+
+  .background {
+    background-color: $primary-bg-color-light;
+  }
+
+  .border-color {
+    border-color: $primary-border-color-light;
+  }
+
+  .button-border {
+    border-color: $primary-button-border-color-light;
+    transition: all 0.5s;
+  }
+  .button-border:hover {
+    border-color: $primary-button-border-hover-color-light;
+  }
+
+  .letter-border-color {
+    border-color: $primary-letter-border-color-light !important;
+  }
+  .letter-border-color-filled {
+    border-color: $primary-letter-border-color-filled-light !important;
+  }
+
+  .key-bg {
+    background-color: $primary-letter-key-bg-color-light;
+  }
+
+  .incorrect {
+    background-color: $primary-incorrect-letter-color-light;
+    border-color: $primary-incorrect-letter-color-light !important;
+    color: #fff;
+  }
+  .incorrect-position {
+    background-color: $primary-incorrect-position-color-light;
+    border-color: $primary-incorrect-position-color-light !important;
+    color: #fff;
+  }
+  .correct {
+    background-color: $primary-correct-position-color-light;
+    border-color: $primary-correct-position-color-light !important;
+    color: #fff;
+  }
+}
+
+.dark {
+  .text {
+    color: $primary-text-color-dark;
+    font-size: 1.6rem;
+  }
+
+  .background {
+    background-color: $primary-bg-color-dark;
+  }
+
+  .border-color {
+    border-color: $primary-border-color-dark;
+  }
+
+  .button-border {
+    border-color: $primary-button-border-color-dark;
+    transition: all 0.5s;
+  }
+  .button-border:hover {
+    border-color: $primary-button-border-hover-color-dark;
+  }
+
+  .letter-border-color {
+    border-color: $primary-letter-border-color-dark !important;
+  }
+  .letter-border-color-filled {
+    border-color: $primary-letter-border-color-filled-dark !important;
+    // animation: flip-coin 1s ease-in;
+  }
+
+  .key-bg {
+    background-color: $primary-letter-key-bg-color-dark;
+  }
+
+  .incorrect {
+    background-color: $primary-incorrect-letter-color-dark;
+    border-color: $primary-incorrect-letter-color-dark !important;
+  }
+  .incorrect-position {
+    background-color: $primary-incorrect-position-color-dark;
+    border-color: $primary-incorrect-position-color-dark !important;
+  }
+  .correct {
+    background-color: $primary-correct-position-color-dark;
+    border-color: $primary-correct-position-color-dark !important;
+  }
+}
+
+.flex {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,45 @@
+@use "../../../styles/abstract/mixins" as *;
+
+.keyboard-container {
+  @include flexColumn;
+  gap: 0.6rem;
+
+  .last-row {
+    width: 100%;
+  }
+
+  .row {
+    @include flexRow;
+    gap: 0.6rem;
+
+    .key {
+      width: 4.3rem;
+      height: 5.8rem;
+      border-radius: 0.4rem;
+      @include flexRow;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .stretched-key {
+      flex: 1;
+      height: 5.8rem;
+      border-radius: 0.4rem;
+      @include flexRow;
+      cursor: pointer;
+    }
+
+    .enter {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0.08rem;
+    }
+
+    .icon {
+      font-size: 2.4rem;
+    }
+  }
+}

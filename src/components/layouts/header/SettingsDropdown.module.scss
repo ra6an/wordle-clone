@@ -1,0 +1,41 @@
+@use "../../../styles/abstract/mixins" as *;
+@use "../../../styles/abstract/colors" as *;
+
+.container {
+  min-width: 20rem;
+  @include flexRow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+
+  ul {
+    width: 100%;
+
+    .single-link {
+      height: 4rem;
+      padding: 0 2rem;
+      width: 100%;
+      @include flexRowSB;
+
+      .slider {
+        display: flex;
+        align-items: center;
+        width: 4rem;
+        height: 2rem;
+        background-color: $slider-color;
+        border: 0.2rem solid $primary-border-color-light;
+        border-radius: 20rem;
+        cursor: pointer;
+
+        .circle {
+          width: 1.6rem;
+          height: 1.6rem;
+          border-radius: 10rem;
+          // border: 0.2rem solid $primary-border-color-light;
+          background-color: $primary-bg-color-dark;
+        }
+      }
+    }
+  }
+}
