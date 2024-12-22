@@ -30,7 +30,7 @@ const Modal = (props) => {
     guesses[currentGuess].guess === word ? "You Won! 🎉" : "You Lost...";
 
   return (
-    <div className={classes.container}>
+    <div className={`text ${classes.container}`}>
       <div className={`${classes.modal}`}>
         {!firstTry && gameEnded && (
           <div

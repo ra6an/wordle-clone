@@ -4,7 +4,7 @@ import classes from "./GameInfo.module.scss";
 
 const GameInfo = (props) => {
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container}`}>
       <div className={classes["single-info"]}>
         <div className={`incorrect ${classes["color"]}`} />
         <p>
