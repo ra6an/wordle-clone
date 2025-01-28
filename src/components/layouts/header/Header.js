@@ -19,7 +19,7 @@ const Header = (props) => {
 
   return (
     <header className={`border-color ${classes.container}`}>
-      <div className={`text ${classes.logo}`}>Wordle BH</div>
+      <div className={`text ${classes.logo}`}>Wordle EN</div>
       <ul className={`text ${classes.links}`}>
         <li>
           <FaRegQuestionCircle className={classes.icon} />
